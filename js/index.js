@@ -37,6 +37,64 @@ const siteContent = {
   },
 };
 
+
+
+let navLinks = document.querySelectorAll("a");
+for(let i = 0; i < navLinks.length; i++){
+  navLinks[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+  navLinks[i].style.color = "green";
+};
+
+// navNew
+const navAdd = document.createElement('a')
+navAdd.href = "https://lambdaschool.com";
+navAdd.textContent = "Created an element here";
+navAdd.style.color = "Blue";
+const nav = document.querySelector("nav");
+nav.appendChild(navAdd);
+
+
+let h1 = document.querySelector("h1");
+h1.textContent = siteContent["cta"]["h1"];
+
+// get started button
+let button = document.querySelector("button");
+  button.textContent = siteContent["cta"]["button"];
+// header img
+let headerImage = document.getElementById("cta-img");
+  headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// middle img
+let middleImage = document.getElementById("middle-img");
+  middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+// text content
+
+let paragraph = document.querySelectorAll("p");
+  paragraph[0].textContent = siteContent["main-content"]["features-content"];
+  paragraph[1].textContent = siteContent["main-content"]["about-content"];
+  paragraph[2].textContent = siteContent["main-content"]["services-content"];
+  paragraph[3].textContent = siteContent["main-content"]["product-content"];
+  paragraph[4].textContent = siteContent["main-content"]["vision-content"];
+  paragraph[5].textContent = siteContent["contact"]["address"];
+  paragraph[6].textContent = siteContent["contact"]["phone"];
+  paragraph[7].textContent = siteContent["contact"]["email"];
+  paragraph[8].textContent = siteContent["footer"]["copyright"];
+
+// h4
+
+let h4 = document.querySelectorAll("h4");
+  h4[0].textContent = siteContent["main-content"]["features-h4"];
+  h4[1].textContent = siteContent["main-content"]["about-h4"];
+  h4[2].textContent = siteContent["main-content"]["services-h4"];
+  h4[3].textContent = siteContent["main-content"]["product-h4"];
+  h4[4].textContent = siteContent["main-content"]["vision-h4"];
+  h4[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
